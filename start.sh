@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COIN=${COIN:=BCN}
+COIN=${COIN:=TEST}
 export POOL=${POOL:="$(cat .coins | grep $COIN | cut -f2)"}
 export PORT=${PORT:="$(cat .coins | grep $COIN | cut -f3)"}
 export ALGORITHM=${ALGORITHM:="$(cat .coins | grep $COIN | cut -f4)"}
@@ -10,7 +10,7 @@ export CPUS=$(grep -c ^processor /proc/cpuinfo)
 
 if [ -z "$POWER" ]
 then
-	export THREADS=${THREADS:=3}
+	export THREADS="$((CPUS-=1))"
 else
 	case "$POWER" in
 		x-1)
