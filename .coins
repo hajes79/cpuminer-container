@@ -1,0 +1,6 @@
+BTC	btc.pool.rio.br	10000	sha256	3QS2qd8tvFPTcfHMEwGsHtjJLmKYPD2APs
+ETH	eth.pool.rio.br	10010	equitash	0xc39f0d28a0a2046e6ab0a30f56b96fac2643178a
+BCH	bch.pool.rio.br	10020	sha256	bitcoincash:qr2vn3l5f5k2z9jj3anjpx32hpza8jhs8qxc5wuawl
+BCN	bcn.pool.rio.br	10030	cryptonight	27g5k9aq3L4675W1piDD1RABtL3gGaAFPUChJY3ei1RjfadVDwe3Hxzdi7ok6B5SQT6UXUtQgusruCoXbqUZm8VJAfhBWrJ
+TEST	bytecoin.uk	3333	cryptonight	27g5k9aq3L4675W1piDD1RABtL3gGaAFPUChJY3ei1RjfadVDwe3Hxzdi7ok6B5SQT6UXUtQgusruCoXbqUZm8VJAfhBWrJ
+
