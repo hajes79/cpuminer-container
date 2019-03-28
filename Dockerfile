@@ -1,5 +1,7 @@
 FROM ubuntu:bionic
 
+ENV LANG=C.UTF-8
+
 WORKDIR /miner
 
 RUN apt-get update && apt-get -qy install \
