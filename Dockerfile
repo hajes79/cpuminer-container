@@ -15,7 +15,7 @@ RUN apt-get update && apt-get -qy install \
  libjansson-dev libgmp-dev g++ --no-install-recommends
 
 
-RUN git clone --recursive https://github.com/pool-rio/cpuminer.git ./
+RUN git clone -b v3.8.8.1 --recursive https://github.com/pool-rio/cpuminer.git ./
 
 RUN ./autogen.sh
 RUN CFLAGS="-O3 -march=native -Wall" CXXFLAGS="$CFLAGS -std=gnu++11" ./configure --with-curl
