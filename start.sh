@@ -27,5 +27,11 @@ fi
 
 echo -e "\nStart mining $COIN at $POOL:$PORT as $WALLET using $ALGORITHM\n\n"
 
-./cpuminer -a $ALGORITHM -o stratum+tcp://$POOL:$PORT -u $WALLET -p $PASSWORD -t $THREADS
-
+case "$COIN" in
+	AEON)
+		xmrig -a $ALGORITHM -o stratum+tcp://$POOL:$PORT -u $WALLET -p $PASSWORD -t $THREADS -k -S
+		;;
+	*)
+		cpuminer -a $ALGORITHM -o stratum+tcp://$POOL:$PORT -u $WALLET -p $PASSWORD -t $THREADS
+		;;
+esac
