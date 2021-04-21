@@ -5,7 +5,7 @@ export POOL=${POOL:="$(cat .coins | grep $COIN | cut -f2)"}
 export PORT=${PORT:="$(cat .coins | grep $COIN | cut -f3)"}
 export ALGORITHM=${ALGORITHM:="$(cat .coins | grep $COIN | cut -f4)"}
 export WALLET=${WALLET:="$(cat .coins | grep $COIN | cut -f5)"}
-export PASSWORD=${PASSWORD:=x}
+export PASSWORD=${PASSWORD:="$(hostname)"}
 export CPUS=$(grep -c ^processor /proc/cpuinfo)
 
 if [ -z "$POWER" ]
