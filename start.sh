@@ -28,7 +28,7 @@ fi
 echo -e "\nStart mining $COIN at $POOL:$PORT as $WALLET using $ALGORITHM\n\n"
 
 case "$COIN" in
-	AEON)
+	AEON|XMR)
 		xmrig -a $ALGORITHM -o stratum+tcp://$POOL:$PORT -u $WALLET -p $PASSWORD -t $THREADS -k -S
 		;;
 	*)
